@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Hub 📊✨</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #6e8efb;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        h2 {
+            color: #6e8efb;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 0.5rem;
+        }
+
+        .tableau-container {
+            position: relative;
+            padding-bottom: 75%; /* Flexible aspect ratio for Tableau */
+            height: 0;
+            overflow: hidden;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .tableau-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .fun-fact {
+            background: linear-gradient(to right, #ffe66d, #ff9f1c);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            animation: bounceIn 1s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            background: linear-gradient(to right, #4ecdc4, #45b7d1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analytics Hub 📈🚀</h1>
+        <p>Where Numbers Meet Fun! 🎉</p>
+    </header>
+
+    <nav>
+        <a href="#overview">Overview 🌟</a>
+        <a href="#tableau">Tableau Analytics 📊</a>
+        <a href="#insights">Key Insights 🔍</a>
+        <a href="#contact">Contact Us 📧</a>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="overview">
+            <h2>Overview 🌈</h2>
+            <p>Welcome to our analytics playground! Dive into data with a smile 😊. Our Tableau dashboards bring numbers to life with vibrant visuals!</p>
+            <div class="fun-fact">Did you know? Data is the new gold! 🏅</div>
+        </div>
+
+        <div class="section" id="tableau">
+            <h2>Tableau Analytics 📊✨</h2>
+            <p>Here’s your star dashboard, hosted on Tableau Public and embedded just for you! Explore trends and insights with a click 🌟</p>
+            <div class="tableau-container">
+                <iframe 
+                    src="https://public.tableau.com/views/Book1_17425547261720/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=n&:apiID=host0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="section" id="insights">
+            <h2>Key Insights 🔍🎯</h2>
+            <ul>
+                <li>📈 Sales spiked by 25% this year!</li>
+                <li>🌍 Top market: Europe</li>
+                <li>🚀 Product Y is rocking it!</li>
+            </ul>
+            <div class="fun-fact">Data can dance if you give it rhythm! 💃🕺</div>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Us 📧😎</h2>
+            <p>Got data questions? Email us at <a href="mailto:info@datahub.com">info@datahub.com</a> or tweet @DataHubFun 🐦</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Data Analytics Hub | Built with ❤️ & ☕</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navigation
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = document.querySelector(this.getAttribute('href'));
+                    section.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Hover effect on fun facts
+            const funFacts = document.querySelectorAll('.fun-fact');
+            funFacts.forEach(fact => {
+                fact.addEventListener('mouseover', () => {
+                    fact.style.transform = 'scale(1.05)';
+                });
+                fact.addEventListener('mouseout', () => {
+                    fact.style.transform = 'scale(1)';
+                });
+            });
+
+            // Welcome alert
+            setTimeout(() => {
+                alert('Welcome to your Data Hub on GitHub Pages! 🎉 Enjoy the Tableau vibes! 📊');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
