@@ -71,7 +71,7 @@
 
         .tableau-container {
             position: relative;
-            padding-bottom: 75%; /* Flexible aspect ratio for Tableau */
+            padding-bottom: 75%; /* יחס גובה גמיש לדשבורד */
             height: 0;
             overflow: hidden;
             background: #f0f0f0;
@@ -134,45 +134,45 @@
 
     <div class="container">
         <div class="section" id="overview">
-            <h2>Overview 🌈</h2>
-            <p>Welcome to our analytics playground! Dive into data with a smile 😊. Our Tableau dashboards bring numbers to life with vibrant visuals!</p>
-            <div class="fun-fact">Did you know? Data is the new gold! 🏅</div>
+            <h2>סקירה כללית 🌈</h2>
+            <p>ברוכים הבאים לאתר האנליטיקס שלנו! כאן תוכלו לצלול לנתונים עם חיוך 😊. הדשבורדים שלנו ב-Tableau הופכים מספרים לסיפורים מרתקים וצבעוניים!</p>
+            <div class="fun-fact">ידעת? נתונים הם המפתח להצלחה! 🔑</div>
         </div>
 
         <div class="section" id="tableau">
-            <h2>Tableau Analytics 📊✨</h2>
-            <p>Here’s your star dashboard, hosted on Tableau Public and embedded just for you! Explore trends and insights with a click 🌟</p>
+            <h2>ניתוח ב-Tableau 📊✨</h2>
+            <p>הנה הדשבורד החדש שלך - הכוכב של האתר! גלו תובנות, חקרו מגמות והתפעלו מהוויזואליות 🌟</p>
             <div class="tableau-container">
                 <iframe 
-                    src="https://public.tableau.com/views/1_17439526836320/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
+                    src="https://public.tableau.com/views/1_17439526836320/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=n&:apiID=host0" 
                     allowfullscreen>
                 </iframe>
             </div>
         </div>
 
         <div class="section" id="insights">
-            <h2>Key Insights 🔍🎯</h2>
+            <h2>תובנות עיקריות 🔍🎯</h2>
             <ul>
-                <li>📈 Sales spiked by 25% this year!</li>
-                <li>🌍 Top market: Europe</li>
-                <li>🚀 Product Y is rocking it!</li>
+                <li>📈 עלייה של 25% במכירות השנה!</li>
+                <li>🌍 השוק המוביל: אירופה</li>
+                <li>🚀 מוצר Y שובר שיאים!</li>
             </ul>
-            <div class="fun-fact">Data can dance if you give it rhythm! 💃🕺</div>
+            <div class="fun-fact">נתונים יכולים לרקוד אם נותנים להם קצב! 💃🕺</div>
         </div>
 
         <div class="section" id="contact">
-            <h2>Contact Us 📧😎</h2>
-            <p>Got data questions? Email us at <a href="mailto:info@datahub.com">info@datahub.com</a> or tweet @DataHubFun 🐦</p>
+            <h2>צור קשר 📧😎</h2>
+            <p>רוצים לדבר נתונים? שלחו לנו מייל ל-<a href="mailto:info@datahub.com">info@datahub.com</a> או צייצו @DataHubFun 🐦</p>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 Data Analytics Hub | Built with ❤️ & ☕</p>
+        <p>© 2025 Data Analytics Hub | נבנה עם ❤️ וקצת ☕</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scrolling for navigation
+            // גלילה חלקה לניווט
             document.querySelectorAll('nav a').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -181,7 +181,7 @@
                 });
             });
 
-            // Hover effect on fun facts
+            // אפקט Hover על עובדות כיפיות
             const funFacts = document.querySelectorAll('.fun-fact');
             funFacts.forEach(fact => {
                 fact.addEventListener('mouseover', () => {
@@ -192,9 +192,9 @@
                 });
             });
 
-            // Welcome alert
+            // התראת ברוכים הבאים
             setTimeout(() => {
-                alert('Welcome to your Data Hub on GitHub Pages! 🎉 Enjoy the Tableau vibes! 📊');
+                alert('ברוכים הבאים לאתר הנתונים שלנו! 🎉 תיהנו מהדשבורד החדש! 📊');
             }, 1000);
         });
     </script>
